@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NutriAI - AI Diet Planner</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+🥗 NutriAI
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Features</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="content">
+
+<h1>AI Powered Nutrition Planner</h1>
+
+<p>
+Generate a personalized diet plan based on your body measurements
+and food preference in just a few seconds.
+</p>
+
+<form action="/result" method="POST">
+
+<div class="input-box">
+<i class="fa-solid fa-user"></i>
+<input type="text" name="name" placeholder="Full Name" required>
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-weight-scale"></i>
+<input type="number" name="weight" placeholder="Weight (kg)" required>
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-ruler-vertical"></i>
+<input type="number" name="height" placeholder="Height (cm)" required>
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-bowl-food"></i>
+
+<select name="diet">
+
+<option value="veg">Vegetarian</option>
+
+<option value="nonveg">Non-Vegetarian</option>
+
+<option value="combined">Mixed Diet</option>
+
+</select>
+
+</div>
+
+<button type="submit">
+Generate Diet Plan
+</button>
+
+</form>
+
+</div>
+
+<div class="image">
+
+<img src="{{ url_for('static', filename='images/hero.png') }}" alt="Healthy Food">
+
+</div>
+
+</section>
+
+
+<section class="features">
+
+<div class="card">
+<i class="fa-solid fa-heart-pulse"></i>
+<h3>BMI Analysis</h3>
+<p>Know your health instantly.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-fire"></i>
+<h3>Calories</h3>
+<p>Daily calorie recommendations.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-apple-whole"></i>
+<h3>Healthy Diet</h3>
+<p>Personalized meal suggestions.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-glass-water"></i>
+<h3>Water Intake</h3>
+<p>Stay hydrated every day.</p>
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 NutriAI | AI Nutrition Assistant</p>
+
+</footer>
+
+</body>
+</html>
